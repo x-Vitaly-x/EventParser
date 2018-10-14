@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Initialize figaro yml file `application.yml` with
+```
+S3_BUCKET_NAME: ...
+AWS_ACCESS_KEY_ID: YOUR_ACCESS_KEY
+AWS_SECRET_ACCESS_KEY: YOUR_SECRET_KEY
+AWS_REGION: ...
 
-Things you may want to cover:
+test:
+  S3_BUCKET_NAME: ...
+``` 
 
-* Ruby version
+and then start the application after the usual `rake db:create/migrate`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Or see it in action on heroku on:
