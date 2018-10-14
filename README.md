@@ -13,4 +13,4 @@ test:
 
 and then start the application after the usual `rake db:create/migrate`
 
-Or see it in action on heroku on:
+Or see it in action on heroku on: https://uploader-testing-app.herokuapp.com
