@@ -6,20 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module UploadImagesTest
+module EventParser
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-
-    config.paperclip_defaults = {
-        storage: :s3,
-        s3_credentials: {
-            bucket: ENV.fetch('S3_BUCKET_NAME'),
-            access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
-            secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
-            s3_region: ENV.fetch('AWS_REGION'),
-        }
-    }
+    config.autoload_paths << Rails.root.join('app/actions/**/')
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

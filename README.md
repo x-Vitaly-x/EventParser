@@ -1,16 +1,11 @@
 # README
 
-Initialize figaro yml file `application.yml` with
-```
-S3_BUCKET_NAME: ...
-AWS_ACCESS_KEY_ID: YOUR_ACCESS_KEY
-AWS_SECRET_ACCESS_KEY: YOUR_SECRET_KEY
-AWS_REGION: ...
+start the application after the usual `rake db:create/migrate`
 
-test:
-  S3_BUCKET_NAME: ...
-``` 
+prepare your parsed events with `rake events:sync`
 
-and then start the application after the usual `rake db:create/migrate`
+start the server with `rails s`
 
-Or see it in action on heroku on: https://uploader-testing-app.herokuapp.com
+test it with `rspec`
+
+Or see it in action on heroku on: https://event-parser-app.herokuapp.com

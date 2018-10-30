@@ -14,10 +14,6 @@ class ApplicationController < ActionController::Base
   private
 
   def get_layout
-    if current_user.present?
-      'application_logged_in'
-    else
-      'application'
-    end
+    'application'
   end
 end
